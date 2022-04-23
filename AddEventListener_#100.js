@@ -44,6 +44,8 @@ myP.onclick = function () {
 // cloned.onclick = function () {
 //   console.log("Iam Cloned");
 // };
+// (e.target) فكرة ال
+// هي بتجيب ال انا ضغطت علية
 
 document.addEventListener("click", function (e) {
   if (e.target.className === "clone") {
