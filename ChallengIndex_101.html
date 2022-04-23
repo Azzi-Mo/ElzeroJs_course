@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+
+   *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: 800;
+   }
+
+   @media (max-width: 480px) {
+
+    section {
+      /* border: 1px solid rgb(115, 255, 0) ; */
+      display: grid;
+      grid-template-columns: [] 49% [] 49%;
+      padding: 0 2%;
+      row-gap: 5px;
+      column-gap: 5px;
+      background: #eee;
+      
+    }
+    .product_box
+    {
+
+      width: 100%;
+      height: 80px;
+      border: 2px solid #eee;
+      border-radius: 5px;
+      display: grid;
+      grid-template-rows: [] 70% [] 8% ;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: white;
+
+    }
+    .sp
+    {
+      font-size: 22px;
+      margin: 0;
+     padding: 0;
+    }   
+    .p
+    {
+      color: rgb(129, 129, 129);
+      text-transform: capitalize;
+      margin: 0;
+      padding: 0;
+    }
+   }
+  
+  @media (min-width: 481px) and  (max-width: 767px) {
+
+    section {
+      /* border: 1px solid red ; */
+      display: grid;
+      grid-template-columns: [] 49% [] 49%;
+      padding: 0 2%;
+      row-gap: 5px;
+      column-gap: 5px;
+      background: #eee;
+      
+    }
+    .product_box
+    {
+
+      width: 100%;
+      height: 80px;
+      border: 2px solid #eee;
+      border-radius: 5px;
+      display: grid;
+      grid-template-rows: [] 70% [] 8% ;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: white;
+
+    }
+    .sp
+    {
+      font-size: 22px;
+      margin: 0;
+     padding: 0;
+    }   
+    .p
+    {
+      color: rgb(129, 129, 129);
+      text-transform: capitalize;
+      margin: 0;
+      padding: 0;
+    }
+    }
+
+    @media (min-width: 768px) and  (max-width: 1024px) {
+
+      section {
+      /* border: 1px solid rgb(0, 140, 255) ; */
+      display: grid;
+      grid-template-columns: [] 30% [] 30% [] 30%;
+      justify-content: center;
+      row-gap: 5px;
+      column-gap: 5px;
+      padding: 0 5px;
+      background: #eee;
+      
+    }
+    .product_box
+    {
+
+      width: 100%;
+      height: 80px;
+      border: 2px solid #eee;
+      border-radius: 5px;
+      display: grid;
+      grid-template-rows: [] 70% [] 8% ;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: white;
+
+    }
+    .sp
+    {
+      font-size: 22px;
+      margin: 0;
+     padding: 0;
+    }   
+    .p
+    {
+      color: rgb(129, 129, 129);
+      text-transform: capitalize;
+      margin: 0;
+      padding: 0;
+    }
+    }
+
+    @media (min-width: 1024px) and  (max-width: 1200px) {
+
+      section {
+      /* border: 1px solid red ; */
+      display: grid;
+      grid-template-columns: [] 30% [] 30% [] 30%;
+      justify-content: center;
+      row-gap: 5px;
+      column-gap: 5px;
+      padding: 0 5px;
+      background: #eee;
+      
+    }
+    .product_box
+    {
+
+      width: 100%;
+      height: 80px;
+      border: 2px solid #eee;
+      border-radius: 5px;
+      display: grid;
+      grid-template-rows: [] 70% [] 8% ;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: white;
+
+    }
+    .sp
+    {
+      font-size: 22px;
+      margin: 0;
+     padding: 0;
+    }   
+    .p
+    {
+      color: rgb(129, 129, 129);
+      text-transform: capitalize;
+      margin: 0;
+      padding: 0;
+    }
+    }
+
+    @media only screen and (min-width: 1201px) {
+
+      section {
+      /* border: 1px solid red ; */
+      display: grid;
+      grid-template-columns: [] 20% [] 20% [] 20% [] 20%;
+      justify-content: center;
+      row-gap: 5px;
+      column-gap: 5px;
+      padding: 0 5px;
+      background: #eee;
+      
+    }
+    .product_box
+    {
+
+      width: 100%;
+      height: 80px;
+      border: 2px solid #eee;
+      border-radius: 5px;
+      display: grid;
+      grid-template-rows: [] 70% [] 8% ;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: white;
+
+    }
+    .sp
+    {
+      font-size: 22px;
+      margin: 0;
+     padding: 0;
+    }   
+    .p
+    {
+      color: rgb(129, 129, 129);
+      text-transform: capitalize;
+      margin: 0;
+      padding: 0;
+    }
+
+    }
+
+
+   </style>
+<body>
+    
+    <script>
+
+          //section up  
+      let up_cont_product = document.createElement('section')
+          up_cont_product.setAttribute('class','up_cont_product')
+
+          document.body.append(up_cont_product)
+
+         // box product
+      for(let i = 1; i <= 15 ; i++)
+      {
+        let product_box = document.createElement('div')
+            product_box.setAttribute('class','product_box')
+        up_cont_product.appendChild(product_box)
+        // proudect_box.append([i])
+        sp = document.createElement('span')
+        p = document.createElement('p')
+
+        sp.setAttribute('class','sp')
+        p.setAttribute('class','p')
+
+        product_box.append(sp,p)
+        sp.append([i])
+
+        p.append(document.createTextNode('product'))
+      }
+
+
+    </script>
+</body>
+</html>
