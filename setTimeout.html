@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Stop</button>
+
+    <script>
+
+          /////////////        #104 - setTimeout and clearTimeout
+ 
+        //   هنا لم انفذ فانكشن فيها بارامز واكتب البارامز بالشكل دا 
+        //  هنا ال سيت تايم اوت مش هاتستني الدقايق لا دي هاتشتغل ع طول 
+        // يعني لما احب انفذ برامز ماتتكتبش بالشكل دا 
+
+    // setTimeout( sayHi('aziz') , 3000 )
+
+    // function sayHi(user)
+    // {
+    //     console.log(`hi ${user}`);
+    // }
+
+               
+         ///////////////
+
+         ///////////////
+
+         // هنا كدا الطريقة الصحيحة اني اكتب البارامز بعد الوقت ال انا كاتبة 
+         // ف الست تايم اوت هاتشتغل عادي وهاتستني الوقت المكتوب 
+
+    // setTimeout( sayHi , 3000 , 'aziz')
+
+    //     function sayHi(user)
+    //     {
+    //         console.log(`hi ${user}`);
+    //     }
+
+         ///////////////
+
+         //////////////
+
+          // هنا عادي اني اكتب اكتر من باراميترز بنفس الشكل دا 
+          
+        // setTimeout( sayHi , 3000 , 'aziz' , 27)
+
+        //     function sayHi(user , age)
+        //     {
+        //         console.log(`hi ${user} u age is ${age}`);
+        //     }
+
+           /////////////////
+        
+            // هنا قدرنا نوقف ال ست تايم اوت من خلال استخدام ال كلير تايم اوت 
+            // قبل ما ال 3 دقايق يعدو بدوس علي الزرار ف بيوقفلي ال ست تايم اوت 
+
+        // let setCount = setTimeout( ()=> { console.log('hi aziz agin') } , 3000)
+
+        // console.log(setCount);
+        //   // هنا ف ملحوظة وهي لما طبعت ال ست تايم اوت ف الكونسل جابلي رقم 2
+        //   // يعني كل ست تايم اوت اعملة لية رقم ف انا ممكن استخدم الرقم دا ف ال كلير تاين اوت 
+        //   // بدل مااكتب القيمة بتاعت ال ست تايم اوت 
+        // bt = document.querySelector('button').onclick = function()
+        // {
+        //     clearTimeout(2)
+        // }    
+        
+              //////////////
+    </script>
+</body>
+</html>
