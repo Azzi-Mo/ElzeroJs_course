@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>5</div>
+
+    <script>
+
+        // الست انترفل بتنفذ فانكشن معينة باستمرار ف خلال عدد ثوان انت بتحددها
+
+          ////////////////
+
+        // setInterval(function()
+        // {
+        //     console.log(`hi`);
+        // } ,2000);
+
+          ////////////////
+
+          ////////////////
+
+           // المثال هنا عندي دف في رقم معين ومن خلال الست انترفال هاخلي كل ثانية ينقص الرقم دا 
+           // لحد مايوصل ل 0 وبعدها هاوقفة من خلال ال كلير تايم اوت 
+       let intCount = setInterval( () => {
+
+            document.querySelector('div').innerHTML -= 1
+            if(document.querySelector('div').innerHTML === "0")
+            {
+                clearTimeout(intCount)
+            }
+          } , 1000)
+ 
+    </script>
+</body>
+</html>
