@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+ 
+     // علشان نعرف خصائص ال هيستوري ممكن نطبعة ف الكونسل 
+     console.log(history);
+
+    // ال لينث عشان اعرف عندي كام صفحة او تاب ف ال هيستوري 
+      history.length
+
+      // هنا ف ال باك وال فورورض اقد ارجع لورا واتقدم قدام 
+      // يعني عشان اعرف انا كنت بتصفح اي قبل الصفحة ال انا فيها بستخدم الباك 
+      // والعكس بقي ف الفورورض 
+      history.back()
+      history.forward()
+      
+      // او ممكن استخدم الطرقة دي باستخدام ال جو عشان ارج لورا صفحة او اطلع لقدام 
+      window.onload = function()
+      {
+         history.go(-1)
+      }
+
+
+    </script>
+</body>
+</html>
