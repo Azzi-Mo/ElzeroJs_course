@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height:5000px">
+    
+    <script>
+
+        /*
+        BOM [Browser Object Model]
+        - Practice => Scroll To Top
+        - scrollX [Alias => PageXOffset]
+        - scrollY [Alias => PageYOffset]
+        */
+
+        // console.log(window.scrollX === window.pageXOffset);
+
+        // let btn = document.querySelector("button");
+
+        // window.onscroll = function () {
+        // if (window.scrollY >= 600) {
+        //     btn.style.display = "block";
+        // } else {
+        //     btn.style.display = "none";
+        // }
+        // };
+
+        // btn.onclick = function () {
+        // window.scrollTo({
+        //     left: 0,
+        //     top: 0,
+        //     behavior: "smooth",
+        // });
+        // };
+
+        //////////////////
+
+        // هنا فكرة المثال ان عملت فانكشن هاقدر اعرف من خلالها اني وصلت عند مستوي معين ف السكرول 
+        // يعني لما وصلت عند 500 بكسل ف السكرول داون هايبجبلي رسالة 
+
+        window.onscroll = function()
+        {
+            if(window.scrollY >= 500 )
+            {
+                console.log('scrolling 500');
+            }
+        }
+
+    </script>
+</body>
+</html>
