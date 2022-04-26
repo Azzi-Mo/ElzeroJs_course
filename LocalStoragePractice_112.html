@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="css.css" />
+  <style>
+    section {
+      border: 1px solid blue;
+    }
+
+    .up_li {
+      /* border: 1px solid red; */
+      height: 100px;
+      display: grid;
+      grid-template-columns: [] 20% [] 20% [] 20% [] 20% [] 20%;
+      grid-template-rows: [] 100%;
+      align-items: center;
+      justify-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      /* border: 1px solid #eee; */
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      margin: 0;
+      cursor: pointer;
+      color: aliceblue;
+      font-size: 25px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      text-align: center;
+      justify-content: center;
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+    ul li.active,
+    ul li:hover {
+      opacity: 1;
+    }
+    ul li:nth-child(1) {
+      background-color: blue;
+    }
+    ul li:nth-child(2) {
+      background-color: red;
+    }
+    ul li:nth-child(3) {
+      background-color: green;
+    }
+    ul li:nth-child(4) {
+      background-color: purple;
+    }
+    ul li:nth-child(5) {
+      background-color: orange;
+    }
+
+    .bg {
+      height: 300px;
+      width: 100%;
+      background-color: blue;
+    }
+  </style>
+
+  <body>
+    <section>
+      <ul class="up_li">
+        <li data-color="blue" class="active">1</li>
+        <li data-color="red">2</li>
+        <li data-color="green">3</li>
+        <li data-color="purple">4</li>
+        <li data-color="orange">5</li>
+      </ul>
+
+      <div class="bg"></div>
+    </section>
+
+    <script>
+      // localStorage.clear()
+      console.log(window.localStorage);
+
+      let lis = document.querySelectorAll("ul li");
+      let bg = document.querySelector(".bg");
+      if (window.localStorage.getItem("color")) {
+        //   console.log('ok ex');
+        bg.style.backgroundColor = window.localStorage.getItem("color");
+
+        lis.forEach((e) => {
+          e.classList.remove("active");
+        });
+
+        document.querySelector(
+          `[data-color='${window.localStorage.getItem("color")}']`
+        ).style.border = "3px solid #d1d1d19c";
+        document
+          .querySelector(
+            `[data-color='${window.localStorage.getItem("color")}']`
+          )
+          .classList.add("active");
+      }
+
+      /// [1] select li
+      /// [2] save color in local storage
+      /// [3] check if color is exist
+      //     [1] if exist put it in bg ground
+      //     [1] else put the defult color
+
+      lis.forEach((li) => {
+        li.addEventListener("click", (e) => {
+          // console.log( e.target.dataset.color);
+
+          // li.classList.remove('active')
+
+          let setColor = window.localStorage.setItem(
+            "color",
+            e.currentTarget.dataset.color
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
