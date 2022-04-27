@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <style>
+
+  input
+  {
+      /* border: 1px solid red; */
+  }
+
+  </style>
+<body>
+    
+
+    <form action="">
+
+        <input type="text" class="nameInput">
+        <input type="submit" name="go" class="sub">
+
+    </form>
+
+
+
+    <script>
+
+
+       sessionStorage.clear()
+
+
+
+    
+
+    //  {sessionStorage} و ال  {localStorage}  الفرق بين ال
+    // ال سيشن مش بيحتفظ بالبايانات عند غلق المتصفح عكس ال لوكال استورج
+    //   ال سيشن مش بيحتفظ بالبيانات لو فتحت تفس الصفحة ف تاب تانية الا فحالة نسخ الصفحة 
+    // السيشن لي نفس خصائص ال لوكال عادي 
+
+        // document.querySelector('.nameInput').onblur = function()
+        // {
+
+        //     window.localStorage.setItem('inputval', this.value )
+        //     window.sessionStorage.setItem('inputval', this.value )
+
+        // }
+
+
+
+         let nameInput = document.querySelector('.nameInput'),
+
+             sub = document.querySelector('.sub')
+
+        sub.onclick = function()
+        {
+           let res = document.createElement('div').innerHTML = nameInput.value
+
+            document.body.append(res)        }
+ 
+
+    </script>
+</body>
+</html>
