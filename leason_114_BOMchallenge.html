@@ -1,18 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
+    <style>
+      
+      *
+      {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 17px;
+      }
+      .sec{
+        /* border: 1px solid red; */
+        width: 600px;
+        margin: 60px auto;
+        padding: 10px;
+      }
+      .up_input
+      {
+        /* border: 1px solid blue; */
+        padding: 10px;
+        background-color: #eee;
+   
+      }
+      .input
+      {
+        width: 80%;
+        padding: 0;
+        margin: 0;
+        height: 30px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+      }
+      .sub{
+        width: 18%;
+        padding: 0;
+        margin: 0;
+        height: 30px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background-color: aquamarine;
+        cursor: pointer;
 
-   <script>
 
+      }
+
+      .result
+      {
+        /* border: 1px solid blue; */
+        margin-top: 15px;
+        width: 100%;
+      }
+      .res_ch
+      {
+        margin: 10px 0;
+        background: #eee;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .sp
+      {
+        width: 80%;
+        /* border: 1px solid red; */
+
+      }
+      .dele
+      {
+        width: 18%;
+        padding: 0;
+        margin: 0;
+        height: 30px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background-color: rgb(255, 127, 127);
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+
+
+    <section class="sec">
      
+        <div class="up_input">
 
-   </script>
-</body>
+          
+        <input type="text" class="input" />
+        <input type="submit" class="sub" value="Add Task" />
+
+        </div>
+
+        <div class="result"></div>
+
+    </section>
+
+
+    <script>
+
+
+      // check input
+      // -------------------------
+      // [1] if input contain value
+      //     [1] check if this value is exist in local
+      //          - massege => this value is exist
+      //     [2] else
+      //         - create dv and append  it in dv
+
+      //[2]if not contain value
+      //    - input is empty
+
+      // localStorage.setItem('o1','oko1')
+
+      let input = document.querySelector(".input"),
+        sub = document.querySelector(".sub");
+
+      sub.onclick = function () {
+        if (input.value !== "") {
+          if (localStorage.getItem(input.value)) {
+            console.log("val is exist in local");
+          } else {
+            console.log("val is not exist in local");      
+
+              localStorage.setItem( input.value , 'test');
+            
+          }
+        }
+      };
+
+      window.onload = function () {
+        if (localStorage.length == 0) {
+          console.log("no item there ");
+        } else {
+          for (let i = 0; i < localStorage.length; i++) {
+            // console.log(localStorage.key(i));
+
+            let dv = document.createElement("div")
+                dv.setAttribute('class' , 'res_ch')
+
+            dv.innerHTML += `<div class='sp' >${localStorage.key(i)} </div > <button class='dele'> Delet </delet>` ;
+
+            res = document.querySelector('.result')
+
+            res.append(dv)
+            
+          }
+
+        }
+      };
+
+      ///////////////////////////////////////////////////////////////////
+
+      //  localStorage.clear()
+      
+    </script>
+  </body>
 </html>
